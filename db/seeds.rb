@@ -18,16 +18,16 @@ phantogram = Artist.create(name: "Phantogram", nationality: "USA", genre: "Elect
 voices = Album.create(title: "Voices", year: 2014, artist_id: phantogram.id, photo_url: "http://a3.files.prettymuchamazing.com/image/upload/c_fit,cs_srgb,dpr_1.0,h_1200,q_80,w_1200/MTMwMTU3NzExNzg5NzA1MjI2.jpg")
 three = Album.create(title: "Three", year: 2016, artist_id: phantogram.id, photo_url: "http://cdn3.pitchfork.com/albums/23915/63a47648.jpg")
 
-nothingbuttrouble = Show.create(title: "Nothing But Trouble", year: 2015, album_id: voices.id, artist_id: phantogram.id, video_url: " ")
-blackoutdays = Show.create(title: "Black Out Days", year: 2015, album_id: voices.id, artist_id: phantogram.id, video_url: " ")
-fallinlove = Show.create(title: "Fall in Love", year: 2015, album_id: voices.id, artist_id: phantogram.id, video_url: " ")
-nevergoinghome = Show.create(title: "Never Going Home", year: 2015, album_id: voices.id, artist_id: phantogram.id, video_url: " ")
-thedayyoudied = Show.create(title: "The Day You Died", year: 2015, album_id: voices.id, artist_id: phantogram.id, video_url: " ")
-howlingatthemoon = Show.create(title: "Howling at the Moon", year: 2015, album_id: voices.id, artist_id: phantogram.id, video_url: " ")
-funeralpyre = Show.create(title: "Funeral Pyre", year: 2016, album_id: three.id, artist_id: phantogram.id, video_url: " ")
-sameoldblues = Show.create(title: "Same Old Blues", year: 2016, album_id: three.id, artist_id: phantogram.id, video_url: " ")
-youdontgetmehighanymore = Show.create(title: "You Don't Get Me High Anymore", year: 2016, album_id: three.id, artist_id: phantogram.id)
-cruelworld = Show.create(title: "Cruel World", year: 2016, album_id: three.id, artist_id: phantogram.id, video_url: " ")
+nothingbuttrouble = Show.create(title: "Nothing But Trouble", year: 2015, album_id: voices.id, artist_id: phantogram.id, video_url: "https://www.youtube.com/embed/7X42HhygJBM")
+blackoutdays = Show.create(title: "Black Out Days", year: 2015, album_id: voices.id, artist_id: phantogram.id, video_url: "https://www.youtube.com/embed/MLYuUPnsEgg")
+fallinlove = Show.create(title: "Fall in Love", year: 2015, album_id: voices.id, artist_id: phantogram.id, video_url: "https://www.youtube.com/embed/YeGcwPvMV10")
+
+thedayyoudied = Show.create(title: "The Day You Died", year: 2015, album_id: voices.id, artist_id: phantogram.id, video_url: "https://www.youtube.com/embed/4_1kygUaG5A")
+howlingatthemoon = Show.create(title: "Howling at the Moon", year: 2015, album_id: voices.id, artist_id: phantogram.id, video_url: "https://www.youtube.com/embed/_WzzPHv1Fo8")
+funeralpyre = Show.create(title: "Funeral Pyre", year: 2016, album_id: three.id, artist_id: phantogram.id, video_url: "https://www.youtube.com/embed/4bGtQdsp_2E")
+sameoldblues = Show.create(title: "Same Old Blues", year: 2016, album_id: three.id, artist_id: phantogram.id, video_url: "https://www.youtube.com/embed/21FFMEh9ICE")
+youdontgetmehighanymore = Show.create(title: "You Don't Get Me High Anymore", year: 2016, album_id: three.id, artist_id: phantogram.id, video_url: "https://www.youtube.com/embed/jaQgfV4PIlw")
+cruelworld = Show.create(title: "Cruel World", year: 2016, album_id: three.id, artist_id: phantogram.id, video_url: "https://www.youtube.com/embed/exEnwwKkTCI")
 
 
 tameimpala = Artist.create(name: "Tame Impala", nationality: "Australia", genre: "Psychedelic Rock", photo_url: "http://beardedgentlemenmusic.com/wp-content/uploads/2015/07/Tame-Impala-Band-2015.jpg")
