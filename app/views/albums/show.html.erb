@@ -1,0 +1,13 @@
+<img src="<%= @album.photo_url %>" />
+<h3><%= @album.title %> </h3>
+<h4><%= @album.artist.name %> </h4>
+
+<% @album.shows.each do |show| %>
+<p>
+<%= show.title %>
+</p>
+<% end %>
+
+<footer>
+<%= link_to "Back to Albums", artist_path(@album.artist), class: "link" %>
+</footer>

@@ -1,0 +1,109 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/**{
+  border: 1px solid red;
+}*/
+
+body{
+  text-align: center;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Quicksand', sans-serif;
+  height: 100%;
+}
+
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.link :visited{
+  color: currentColor;
+}
+
+.link:hover{
+  color: rgba(88, 174, 223, 1.00);
+}
+
+a{
+  color: currentColor;
+  text-decoration: none;
+}
+
+a:visited{
+  color: currentColor;
+  text-decoration: none;
+}
+
+img{
+  width: 400px;
+  align-self: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h1{
+  font-family: 'Unica One', cursive;
+  font-size: 60px;
+  margin-bottom: auto;
+  color: rgba(88, 174, 223, 1.00);
+}
+
+h2{
+  font-family: 'Poiret One', cursive;
+  margin-top: auto;
+}
+
+h3{
+  font-size: 50px;
+  margin-bottom: auto;
+}
+
+p{
+  font-size: 20px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.artistcard{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: stretch;
+  justify-content: center;
+  justify-content: space-around;
+
+}
+
+.albuminfo{
+  text-align: center;
+  margin-left: 0px;
+}
+
+#albumlisthead{
+  color: rgba(255, 116, 48, 1.00);
+  font-size: 40px;
+}
+
+#artistbio{
+  font-size: 15px;
+}
+
+footer{
+margin-top: 100px;
+}

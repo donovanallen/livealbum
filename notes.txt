@@ -1,0 +1,43 @@
+2 model crud
+
+Tour shows:
+
+Artist model
+Has many tours
+
+Tour model
+Belongs to artist
+Has many show
+
+
+video/show model
+
+
+Year model
+
+****************
+Live album:
+
+** ADD video url to show
+
+Artist model
+-Has many albums
+-schema: name, nationality, genre?,
+
+
+album model
+-Belongs to artist
+--Has many shows
+-schema: name, artist_id(auto?), year,
+
+
+video/show model
+-Belongs to album
+--belongs to artist
+-schema: title, artist(artist_id?), year of performance,
+
+
+Seed data
+Outkast
+Tame Impala
+kaytranada/phantogram/flume

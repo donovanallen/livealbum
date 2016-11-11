@@ -1,0 +1,20 @@
+<h3> <%= @artist.name %> </h3>
+<p id="artistbio">
+  <%= @artist.genre %> | <%= @artist.nationality %>
+</p>
+<br>
+<div class="artistcard">
+  <img src="<%= @artist.photo_url %>" alt="phantogram" />
+  <div class="albuminfo">
+    <h3 id="albumlisthead">Albums</h3>
+    <% @artist.albums.each do |album| %>
+    <p>
+      <%= link_to album.title, album_path(album), class: "link" %>
+    </p>
+    <% end %>
+  </div>
+</div>
+
+<footer>
+<%= link_to "Back to Artists", artists_path, class: "link" %>
+</footer>
