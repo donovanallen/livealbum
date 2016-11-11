@@ -19,12 +19,14 @@
 
 body{
   text-align: center;
+  /*background-color: RGBA(33, 33, 33, 1.00);*/
   background-color: black;
   color: white;
   display: flex;
   flex-direction: column;
   font-family: 'Quicksand', sans-serif;
   height: 100%;
+  padding: 10px;
 }
 
 .link {
@@ -51,27 +53,72 @@ a:visited{
 }
 
 img{
-  width: 400px;
+  width: 250px;
   align-self: center;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-h1{
-  font-family: 'Unica One', cursive;
-  font-size: 60px;
-  margin-bottom: auto;
-  color: rgba(88, 174, 223, 1.00);
+#logo{
+  height: 100px;
+  width: 100px;
+  margin: 5px;
 }
+
+/*header *{
+  border: 2px solid red;
+}*/
+
+header{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.heading *{
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1{
+  font-family: 'Megrim', cursive;
+  font-size: 60px;
+  margin-bottom: 0px;
+  color: RGBA(255, 0, 141, 1.00);
+  padding-top: 0px;
+  padding-bottom: 0px;
+  text-align: left;
+}
+
 
 h2{
   font-family: 'Poiret One', cursive;
-  margin-top: auto;
+  margin-top: 0;
 }
 
 h3{
   font-size: 50px;
   margin-bottom: auto;
+  margin-top:  10px;
+}
+
+h4{
+  color: RGBA(80, 84, 87, 1.00);
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.showinfo{
+  margin-bottom: 25px;
+}
+
+#home{
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 p{
@@ -84,10 +131,28 @@ p{
   display: flex;
   flex-direction: row;
   text-align: center;
-  align-items: stretch;
+  align-items: flex-start;
   justify-content: center;
-  justify-content: space-around;
+}
 
+.artistpage{
+  border: 3px solid white;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: center;
+  justify-content: center;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 700px;
+  margin-top: 40px;
+}
+
+#artistindex{
+  background-color: RGBA(33, 33, 33, .6);
 }
 
 .albuminfo{
@@ -97,11 +162,18 @@ p{
 
 #albumlisthead{
   color: rgba(255, 116, 48, 1.00);
-  font-size: 40px;
+  font-size: 30px;
+  margin-top: 10px;
 }
 
 #artistbio{
   font-size: 15px;
+}
+
+#albumtitles{
+  text-align: left;
+  margin-top: 0px;
+  padding: 10px;
 }
 
 footer{

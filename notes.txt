@@ -18,7 +18,9 @@ Year model
 ****************
 Live album:
 
-** ADD video url to show
+**next/previous button on show show page
+**add video playlist model - "put on your own show/concert"
+**add users model
 
 Artist model
 -Has many albums
@@ -41,5 +43,8 @@ Seed data
 Outkast
 Tame Impala
 kaytranada/phantogram/flume
+disclosure
+beyonce
+
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/AH1S411Bzmw" frameborder="0" allowfullscreen></iframe>

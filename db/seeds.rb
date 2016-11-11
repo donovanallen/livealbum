@@ -34,19 +34,22 @@ tameimpala = Artist.create(name: "Tame Impala", nationality: "Australia", genre:
 
 currents = Album.create(title: "Currents", year: 2015, artist_id: tameimpala.id, photo_url: "https://consequenceofsound.files.wordpress.com/2015/04/tame-impala-currents.jpg")
 lonerism = Album.create(title: "Lonerism", year: 2012, artist_id: tameimpala.id, photo_url: "http://img2-ak.lst.fm/i/u/ar0/b26ef0952cfb42ea8963a4283789599d")
-
 letithappen = Show.create(title: "Let It Happen", year: 2015, album_id: currents.id, artist_id: tameimpala.id, video_url: "https://www.youtube.com/embed/AH1S411Bzmw" )
-
 thelessiknowthebetter = Show.create(title: "The Less I Know The Better", year: 2015, album_id: currents.id, artist_id: tameimpala.id, video_url: "https://www.youtube.com/embed/yL4jqJZJxco")
-
 causeimaman = Show.create(title: "Cause I'm a Man", year: 2015, album_id: currents.id, artist_id: tameimpala.id, video_url: "https://www.youtube.com/embed/FNBwxPX7D-4")
-
 themoment = Show.create(title: "The Moment", year: 2015, album_id: currents.id, artist_id: tameimpala.id, video_url: "https://www.youtube.com/embed/6K3PlnxI-fg")
-
 yesimchanging = Show.create(title: "Yes I'm Changing", year: 2015, album_id: currents.id, artist_id: tameimpala.id, video_url: "https://www.youtube.com/embed/nxhqubvkhJA")
-
 elephant = Show.create(title: "Elephant", year: 2016, album_id: lonerism.id, artist_id: tameimpala.id, video_url: "https://www.youtube.com/embed/WJ_rxZcFpIs")
-
 feelslikewe = Show.create(title: "Feels Like We Only Go Backwards", year: 2016, album_id: lonerism.id, artist_id: tameimpala.id, video_url: "https://www.youtube.com/embed/8F0AFaYedeo")
-
 beaboveit = Show.create(title: "Be Above It", year: 2016, album_id: lonerism.id, artist_id: tameimpala.id, video_url: "https://www.youtube.com/embed/uanEHKkRqdM")
+
+#FLUME
+flume = Artist.create(name: "Flume", nationality: "Australia", genre: "Electronica", photo_url: "http://youredm.youredm1.netdna-cdn.com/wp-content/uploads/2016/01/Flume-Orange-Backdrop.jpg?x98500")
+
+flumethealbum = Album.create(title: "Flume", year: 2012, artist_id: flume.id, photo_url: "https://upload.wikimedia.org/wikipedia/en/1/1c/Flume_Deluxe_Edition_album_cover.jpg")
+skin = Album.create(title: "Skin", year: 2016, artist_id: flume.id, photo_url: "http://earmilk.com/wp-content/uploads/2016/05/flume-skin.jpg")
+holdinon = Show.create(title: "Holdin On", year: 2012, album_id: flumethealbum.id, artist_id: flume.id, video_url: "https://www.youtube.com/embed/nq-xEQf5DYA")
+ontop = Show.create(title: "On Top", year: 2012, album_id: flumethealbum.id, artist_id: flume.id, video_url: "https://www.youtube.com/embed/ygF9s1RfOYs")
+leftalone = Show.create(title: "Left Alone", year: 2012, album_id: flumethealbum.id, artist_id: flume.id, video_url: "https://www.youtube.com/embed/AvqaJyjE-bg")
+sayit = Show.create(title: "Say It", year: 2016, album_id: skin.id, artist_id: flume.id, video_url: "https://www.youtube.com/embed/POfhB6vU0Ns")
+neverbelikeyou = Show.create(title: "Never Be Like You", year: 2016, album_id: skin.id, artist_id: flume.id, video_url: "https://www.youtube.com/embed/vNy-CnyEMoA")

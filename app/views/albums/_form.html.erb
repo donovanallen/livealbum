@@ -1,0 +1,24 @@
+<br>
+<%= form_for @album do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %>
+<br>
+<br>
+<%= f.label :year %>
+<%= f.text_field :year %>
+<br>
+<br>
+<%= f.label :artist_id %>
+<%= f.text_field :artist_id %>
+<br>
+<br>
+<%= f.label :photo_url %>
+<%= f.text_field :photo_url %>
+<br>
+<br>
+<%= f.submit %>
+<% end %>
+
+<% @album.errors.full_messages.each do |message| %>
+  <p><%= message %></p>
+<% end %>

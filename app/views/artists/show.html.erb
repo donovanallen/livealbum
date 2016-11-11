@@ -1,17 +1,21 @@
-<h3> <%= @artist.name %> </h3>
-<p id="artistbio">
-  <%= @artist.genre %> | <%= @artist.nationality %>
-</p>
-<br>
-<div class="artistcard">
-  <img src="<%= @artist.photo_url %>" alt="phantogram" />
-  <div class="albuminfo">
-    <h3 id="albumlisthead">Albums</h3>
-    <% @artist.albums.each do |album| %>
-    <p>
-      <%= link_to album.title, album_path(album), class: "link" %>
-    </p>
-    <% end %>
+<div class="artistpage">
+  <h3> <%= @artist.name %> </h3>
+  <p id="artistbio">
+    <%= @artist.genre %> | <%= @artist.nationality %>
+  </p>
+  <br>
+  <div class="artistcard">
+    <div class="albuminfo" id="artistphoto">
+      <img src="<%= @artist.photo_url %>" alt="phantogram" />
+    </div>
+    <div class="albuminfo" id="albumtitles">
+      <h3 id="albumlisthead">Albums <%= link_to "+", new_album_path %> </h3>
+      <% @artist.albums.each do |album| %>
+      <p>
+        <%= link_to album.title, album_path(album), class: "link" %>
+      </p>
+      <% end %>
+    </div>
   </div>
 </div>
 
