@@ -4,7 +4,7 @@
 
 <% @album.shows.each do |show| %>
 <p>
-<%= show.title %>
+<%= link_to show.title, show_path(show), class: "link" %>
 </p>
 <% end %>
 

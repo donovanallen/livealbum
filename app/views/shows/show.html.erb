@@ -1,0 +1,12 @@
+<h3><%= @show.title %> </h3>
+<h4><%= @show.artist.name  %> </h4>
+
+<div class="embed-container">
+      <iframe width="640" height="360" src="<%= @show.video_url %>" frameborder="0" allowfullscreen></iframe>
+
+    </div>
+
+
+    <footer>
+    <%= link_to "Back to #{@show.album.title}", album_path(@show.album), class: "link" %>
+    </footer>
