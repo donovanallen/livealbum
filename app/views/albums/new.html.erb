@@ -4,5 +4,5 @@
 <br>
 
 <footer>
-<%= link_to "Back to #{@album.artist}", artist_path, class: "link" %>
+<%= link_to "Back to #{@album.artist.name}", @album.artist, class: "link" %>
 </footer>

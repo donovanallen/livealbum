@@ -32,6 +32,7 @@ body{
 .link {
   text-decoration: none;
   color: currentColor;
+  transition: width 2s;
 }
 
 .link :visited{
@@ -39,8 +40,13 @@ body{
 }
 
 .link:hover{
-  color: rgba(88, 174, 223, 1.00);
+  color: RGBA(255, 0, 141, 1.00);
+  text-shadow: 1px 1px 3px gray;
 }
+
+/*#artistlisting:hover > .artistpage{
+  background-image: url(<%#= photo %>);
+}*/
 
 a{
   color: currentColor;
@@ -101,9 +107,10 @@ h2{
 }
 
 h3{
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: auto;
   margin-top:  10px;
+  color: RGBA(57, 229, 255, 1.00);
 }
 
 h4{
@@ -122,7 +129,7 @@ h4{
 }
 
 p{
-  font-size: 20px;
+  font-size: 30px;
   margin-top: 3px;
   margin-bottom: 3px;
 }
@@ -161,8 +168,8 @@ p{
 }
 
 #albumlisthead{
-  color: rgba(255, 116, 48, 1.00);
-  font-size: 30px;
+  color: RGBA(80, 84, 87, 1.00);
+  font-size: 20px;
   margin-top: 10px;
 }
 

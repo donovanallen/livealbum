@@ -21,6 +21,11 @@ Live album:
 **next/previous button on show show page
 **add video playlist model - "put on your own show/concert"
 **add users model
+**sort all indexes/lists by alpha
+**nav bar
+**CRUD - update
+**add more fields/columns to shows(venue, ); artists;
+**devise/user actions
 
 Artist model
 -Has many albums

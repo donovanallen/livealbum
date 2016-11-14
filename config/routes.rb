@@ -2,12 +2,12 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :artists do
-    resources :albums do
-      resources :shows
-    end
+    resources :albums
   end
-  resources :shows
-  resources :albums
+
+  resources :albums do
+    resources :shows
+  end
 
   root "artists#index"
 end

@@ -3,13 +3,17 @@
   <p id="artistbio">
     <%= @artist.genre %> | <%= @artist.nationality %>
   </p>
+  <h4><%= link_to "Delete this Artist", artist_path(@artist),
+  method: :delete,
+  data: { confirm: 'Are you sure?' } %> </h4>
+  <h4>Edit artist details</h4>
   <br>
   <div class="artistcard">
     <div class="albuminfo" id="artistphoto">
       <img src="<%= @artist.photo_url %>" alt="phantogram" />
     </div>
     <div class="albuminfo" id="albumtitles">
-      <h3 id="albumlisthead">Albums <%= link_to "+", new_album_path %> </h3>
+      <h3 id="albumlisthead">Albums <%= link_to "+", new_artist_album_path(@artist) %> </h3>
       <% @artist.albums.each do |album| %>
       <p>
         <%= link_to album.title, album_path(album), class: "link" %>

@@ -19,6 +19,15 @@ class AlbumsController < ApplicationController
     redirect_to @artist
   end
 
+  def destroy
+
+    @album = Album.find(params[:id])
+    @artist = @album.artist
+    @album.destroy
+
+    redirect_to @artist
+  end
+
 
   private
   def album_params

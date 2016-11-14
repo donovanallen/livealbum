@@ -2,14 +2,20 @@
   <img src="<%= @album.photo_url %>" />
   <h3><%= @album.title %> </h3>
   <h4><%= @album.artist.name %> </h4>
+  <h4><%= link_to "Submit a new show for #{@album.title}", new_album_show_path(@album) %> </h4>
+  <br>
+  <h4><%= link_to "Delete this Album", album_path(@album),
+  method: :delete,
+  data: { confirm: 'Are you sure?' } %> </h4>
+  <h4>Edit album details</h4>
 <br>
   <% @album.shows.each do |show| %>
   <p>
-  <%= link_to show.title, show_path(show), class: "link" %>
+  <%= link_to show.title, album_show_path(show.id), class: "link" %>
   </p>
   <% end %>
 </div>
 
 <footer>
-<%= link_to "Back to Albums", artist_path(@album.artist), class: "link" %>
+<%= link_to "Back to #{@album.artist.name}'s Albums", artist_path(@album.artist), class: "link" %>
 </footer>

@@ -1,5 +1,5 @@
 <br>
-<%= form_for [@artist, @album] do |f| %>
+<%= form_for [@album, @show] do |f| %>
 <%= f.label :title %>
 <%= f.text_field :title %>
 <br>
@@ -8,13 +8,13 @@
 <%= f.text_field :year %>
 <br>
 <br>
-<%= f.label :photo_url %>
-<%= f.text_field :photo_url %>
+<%= f.label :video_url %>
+<%= f.text_field :video_url %>
 <br>
 <br>
 <%= f.submit %>
 <% end %>
 
-<% @album.errors.full_messages.each do |message| %>
+<% @show.errors.full_messages.each do |message| %>
   <p><%= message %></p>
 <% end %>

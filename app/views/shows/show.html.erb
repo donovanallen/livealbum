@@ -1,7 +1,11 @@
 <div class="showinfo">
   <h3><%= @show.title %> </h3>
   <h4><%= @show.album.title %> </h4>
-  <h4><%= @show.artist.name  %> </h4>
+  <h4><%= @show.album.artist.name  %> </h4>
+  <h4><%= link_to "Delete this Show", album_show_path(@show),
+  method: :delete,
+  data: { confirm: 'Are you sure?' } %> </h4>
+  <h4>Edit show details</h4>
 </div>
 
 <div class="embed-container">

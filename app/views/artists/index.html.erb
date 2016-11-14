@@ -5,7 +5,7 @@
 <br>
 <% @artists.each do |artist| %>
 <p>
-  <%= link_to artist.name, artist_path(artist.id), class: "link" %>
+  <%= link_to artist.name, artist_path(artist.id), class: "link", id: "artistlisting" %>
 </p>
 <% end %>
 </div>

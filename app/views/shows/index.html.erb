@@ -1,0 +1,11 @@
+<div class="artistpage" id="showsindex">
+
+<h3>All Shows</h3>
+<h5><%= link_to "Add a new show", new_show_path, class: "link" %> </h5>
+<br>
+<% @shows.each do |show| %>
+<p>
+  <%= link_to show.title, show_path(show.id), class: "link", id: "artistlisting" %>
+</p>
+<% end %>
+</div>
