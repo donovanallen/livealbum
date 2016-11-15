@@ -13,6 +13,11 @@
   <% @album.shows.each do |show| %>
   <p>
   <%= link_to show.title, album_show_path(show.id), class: "link" %>
+  <% if show.users.include? current_user %>
+        <%= link_to "&hearts;".html_safe, delete_from_showlist_show_path(show), method: :delete, class: "fav" %>
+      <% else %>
+        <%= link_to "&hearts;".html_safe, add_to_showlist_show_path(show), method: :post, class: "no-fav" %>
+      <% end %>
   </p>
   <% end %>
 </div>

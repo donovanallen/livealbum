@@ -12,6 +12,7 @@
 Artist.destroy_all
 Album.destroy_all
 Show.destroy_all
+User.destroy_all
 
 phantogram = Artist.create(name: "Phantogram", nationality: "USA", genre: "Electro Rock", photo_url: "https://cdn0.vox-cdn.com/thumbor/aUYfrZSburBcMMfDOkxn-ICdiVE=/0x75:2000x1408/1280x854/cdn0.vox-cdn.com/uploads/chorus_image/image/49890087/GettyImages-540882094.0.jpg")
 
@@ -53,3 +54,7 @@ ontop = Show.create(title: "On Top", year: 2012, album_id: flumethealbum.id, art
 leftalone = Show.create(title: "Left Alone", year: 2012, album_id: flumethealbum.id, artist_id: flume.id, video_url: "https://www.youtube.com/embed/AvqaJyjE-bg")
 sayit = Show.create(title: "Say It", year: 2016, album_id: skin.id, artist_id: flume.id, video_url: "https://www.youtube.com/embed/POfhB6vU0Ns")
 neverbelikeyou = Show.create(title: "Never Be Like You", year: 2016, album_id: skin.id, artist_id: flume.id, video_url: "https://www.youtube.com/embed/vNy-CnyEMoA")
+
+donovan = User.create(email: "don@email.com", password: "password")
+
+jon = User.create(email: "jon@email.com", password: "password")

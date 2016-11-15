@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  numberOfShows: 1
+  lengthMin: 1
+  show: one
+
+two:
+  name: MyString
+  numberOfShows: 1
+  lengthMin: 1
+  show: two

@@ -18,7 +18,9 @@ Year model
 ****************
 Live album:
 **devise/user actions
+
 **nav bar
+
 add more seed data
 
 **next/previous button on show show page

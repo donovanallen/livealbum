@@ -21,8 +21,19 @@
   </header>
   <hr style="color:white;width:97%;margin-top:15px">
 <br>
+
+  <% if !current_user %>
+    <%= link_to "Sign up", new_user_registration_path %>
+    <%= link_to "Sign In", new_user_session_path %>
+  <% else %>
+    <%= link_to "New Showlist", new_showlist_path %>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+    <%= current_user.email %>
+  <% end %>
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+
     <%= yield %>
   </body>
 

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  root "artists#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :artists do
@@ -9,5 +11,13 @@ Rails.application.routes.draw do
     resources :shows
   end
 
-  root "artists#index"
+  resources :showlists 
+
+  resources :shows do
+    member do
+      post 'add_to_showlist'
+      delete 'delete_from_showlist'
+    end
+  end
+
 end

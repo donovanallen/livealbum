@@ -1,0 +1,12 @@
+<br>
+<%= form_for @showlist do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br>
+<br>
+<%= f.submit %>
+<% end %>
+
+<% @showlist.errors.full_messages.each do |message| %>
+  <p><%= message %></p>
+<% end %>
