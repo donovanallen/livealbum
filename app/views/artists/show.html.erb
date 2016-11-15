@@ -6,7 +6,7 @@
   <h4><%= link_to "Delete this Artist", artist_path(@artist),
   method: :delete,
   data: { confirm: 'Are you sure?' } %> </h4>
-  <h4>Edit artist details</h4>
+  <h4><%= link_to "Edit artist details", edit_artist_path(@artist) %></h4>
   <br>
   <div class="artistcard">
     <div class="albuminfo" id="artistphoto">

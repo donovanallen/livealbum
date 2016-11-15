@@ -23,8 +23,7 @@ Live album:
 **add users model
 **sort all indexes/lists by alpha
 **nav bar
-**CRUD - update
-**add more fields/columns to shows(venue, ); artists;
+**add more fields/columns to shows(venue,); artists;
 **devise/user actions
 
 Artist model

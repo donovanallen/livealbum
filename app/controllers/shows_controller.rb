@@ -1,6 +1,6 @@
 class ShowsController < ApplicationController
+
   def show
-    @album = Album.find(params[:id])
     @show = Show.find(params[:album_id])
   end
 
@@ -18,6 +18,18 @@ class ShowsController < ApplicationController
     @show = @album.shows.create!(show_params)
     @artist = @album.artist
     redirect_to @album
+  end
+
+  def edit
+    @album = Album.find(params[:id])
+    @show = @album.shows.find(params[:album_id])
+  end
+
+  def update
+    @show = Show.find(params[:id])
+    @show.update(show_params)
+
+    redirect_to album_show_path(@show)
   end
 
   def destroy
