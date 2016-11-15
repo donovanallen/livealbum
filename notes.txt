@@ -17,14 +17,14 @@ Year model
 
 ****************
 Live album:
+**devise/user actions
+**nav bar
+add more seed data
 
 **next/previous button on show show page
 **add video playlist model - "put on your own show/concert"
-**add users model
 **sort all indexes/lists by alpha
-**nav bar
 **add more fields/columns to shows(venue,); artists;
-**devise/user actions
 
 Artist model
 -Has many albums
