@@ -4,11 +4,9 @@
   <h4><%= @album.artist.name %> </h4>
   <h4><%= @album.year %> </h4>
   <br>
-  <h4><%= link_to "Submit a new show for #{@album.title}", new_album_show_path(@album) %> </h4>
-  <h4><%= link_to "Delete this Album", album_path(@album),
+  <h4><%= link_to "Add to #{@album.title}", new_album_show_path(@album) %> &nbsp;|&nbsp; <%= link_to "Edit", edit_album_path(@album) %> &nbsp;|&nbsp; <%= link_to "Delete", album_path(@album),
   method: :delete,
   data: { confirm: 'Are you sure?' } %> </h4>
-  <h4><%= link_to "Edit album details", edit_album_path(@album) %></h4>
 <br>
   <% @album.shows.each do |show| %>
   <p>

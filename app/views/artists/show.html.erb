@@ -1,12 +1,15 @@
 <div class="artistpage">
-  <h3> <%= @artist.name %> </h3>
+  <h2> <%= @artist.name %> </h2>
   <p id="artistbio">
     <%= @artist.genre %> | <%= @artist.nationality %>
   </p>
-  <h4><%= link_to "Delete this Artist", artist_path(@artist),
-  method: :delete,
-  data: { confirm: 'Are you sure?' } %> </h4>
-  <h4><%= link_to "Edit artist details", edit_artist_path(@artist) %></h4>
+  <h4>
+    <%= link_to "Edit", edit_artist_path(@artist) %> &nbsp;|&nbsp;
+    <%= link_to "Delete", artist_path(@artist),
+    method: :delete,
+    data: { confirm: 'Are you sure?' } %>
+  </h4>
+
   <br>
   <div class="artistcard">
     <div class="albuminfo" id="artistphoto">

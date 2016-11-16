@@ -18,12 +18,13 @@ Year model
 ****************
 Live album:
 
-**error handling/validation
----highlighted field on error
-**devise/user actions
 **nav bar logos
 add more seed data
-homepage/root
+root/main styling
+
+devise views
+video submission
+spotify APIs
 
 **next/previous button on show show page
 **add video playlist model - "put on your own show/concert"

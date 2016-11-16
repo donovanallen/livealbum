@@ -28,16 +28,22 @@ class ArtistsController < ApplicationController
 
   def update
     @artist = Artist.find(params[:id])
-    @artist.update(artist_params)
-
-    redirect_to artist_path(@artist), notice: "Artist was updated!"
+    if current_user
+      @artist.update(artist_params)
+      redirect_to artist_path(@artist), notice: "Artist was updated!"
+    else
+      redirect_to artist_path(@artist), alert: "You must be signed in to edit this artist."
+    end
   end
 
   def destroy
     @artist = Artist.find(params[:id])
-    @artist.destroy
-
-    redirect_to artists_url, notice: "Artist was deleted!"
+    if current_user
+      @artist.destroy
+      redirect_to artists_url, notice: "Artist was deleted!"
+    else
+      redirect_to artists_url, alert: "You must be signed in to delete this artist."
+    end
   end
 
   private

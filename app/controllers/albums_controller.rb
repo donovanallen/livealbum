@@ -29,18 +29,23 @@ class AlbumsController < ApplicationController
 
   def update
     @album = Album.find(params[:id])
-    @album.update(album_params)
-
-    redirect_to artist_album_path(@album), notice: "Album was updated!"
+    if current_user
+      @album.update(album_params)
+      redirect_to artist_album_path(@album), notice: "Album was updated!"
+    else
+      redirect_to artist_album_path(@album), alert: "You must be signed in to edit this album."
+    end
   end
 
   def destroy
-
     @album = Album.find(params[:id])
     @artist = @album.artist
-    @album.destroy
-
-    redirect_to @artist, notice: "Album was deleted!"
+    if current_user
+      @album.destroy
+      redirect_to @artist, notice: "Album was deleted!"
+    else
+      redirect_to @artist, alert: "You must be signed in to delete this album."
+    end
   end
 
 

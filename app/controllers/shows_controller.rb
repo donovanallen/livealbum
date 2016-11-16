@@ -32,17 +32,23 @@ class ShowsController < ApplicationController
 
   def update
     @show = Show.find(params[:id])
-    @show.update(show_params)
-
-    redirect_to album_show_path(@show), notice: "Song was updated!"
+    if current_user
+      @show.update(show_params)
+      redirect_to album_show_path(@show), notice: "Song was updated!"
+    else
+      redirect_to album_show_path(@show), alert: "You must be signed in to edit this show."
+    end
   end
 
   def destroy
     @album = Album.find(params[:id])
     @show = @album.shows.find(params[:album_id])
-    @show.destroy
-
-    redirect_to artist_album_path(@album), notice: "Song was deleted!"
+    if current_user
+      @show.destroy
+      redirect_to artist_album_path(@album), notice: "Song was deleted!"
+    else
+      redirect_to artist_album_path(@album), alert: "You must be signed in to delete this show."
+    end
   end
 
 
