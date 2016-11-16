@@ -27,8 +27,7 @@
     <%= link_to "Sign In", new_user_session_path %>
   <% else %>
     <%#= link_to "New Showlist", new_showlist_path %>
-    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-    <%= " || " %>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %> &nbsp;|&nbsp;
     <%= current_user.email %>
   <% end %>
 </div>

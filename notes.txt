@@ -23,6 +23,7 @@ Live album:
 **devise/user actions
 **nav bar logos
 add more seed data
+homepage/root
 
 **next/previous button on show show page
 **add video playlist model - "put on your own show/concert"
