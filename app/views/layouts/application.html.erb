@@ -10,7 +10,16 @@
   </head>
 
   <body>
-
+    <script>
+    var siriWave = new SiriWave({
+      container: document.getElementById('siri-container'),
+      width: 640,
+      height: 200,
+      speed: 0.2,
+      color: white,
+      frequency: 2
+    });
+    </script>
     <header>
     <img src="/assets/logo-b026502bb6e188b97c6dca0ddc9c192542f01aeef188adc0709344f2059101b0.png" alt="logo" id="logo" />
 
@@ -41,6 +50,7 @@
 
 
     <%= yield %>
+
   </body>
 
 </html>

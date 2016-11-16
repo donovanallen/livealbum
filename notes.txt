@@ -24,7 +24,8 @@ root/main styling
 
 devise views
 video submission
-spotify APIs
+spotify API
+setlist API
 
 **next/previous button on show show page
 **add video playlist model - "put on your own show/concert"

@@ -1,10 +1,25 @@
 <br>
 <br>
 <br>
+<div id='bars'>
+  <div class='bar'></div>
+  <div class='bar'></div>
+  <div class='bar'></div>
+  <div class='bar'></div>
+  <div class='bar'></div>
+  <div class='bar'></div>
+  <div class='bar'></div>
+  <div class='bar'></div>
+  <div class='bar'></div>
+  <div class='bar'></div>
+</div>
 <div class="mainwelcome">
   <% if !current_user %>
     <h2>Welcome to LiveAlbum</h2>
   <% else %>
     <h2>Welcome back, <%= current_user.email %> </h2>
   <% end %>
+
+
+
 </div>
