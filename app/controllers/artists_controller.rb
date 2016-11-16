@@ -1,6 +1,6 @@
 class ArtistsController < ApplicationController
   def index
-    @artists = Artist.all
+    @artists = Artist.all.order('name')
     # photo = @artists.find(artist).photo_url
   end
 

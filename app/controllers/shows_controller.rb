@@ -5,7 +5,7 @@ class ShowsController < ApplicationController
   end
 
   def index
-    @shows = Show.all
+    @shows = Show.all.order('name')
   end
 
   def new
