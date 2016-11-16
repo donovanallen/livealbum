@@ -11,13 +11,4 @@ Rails.application.routes.draw do
     resources :shows
   end
 
-  resources :showlists 
-
-  resources :shows do
-    member do
-      post 'add_to_showlist'
-      delete 'delete_from_showlist'
-    end
-  end
-
 end

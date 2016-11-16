@@ -26,6 +26,7 @@ body{
   flex-direction: column;
   font-family: 'Quicksand', sans-serif;
   height: 100%;
+  width: 97%;
   padding: 10px;
 }
 
@@ -155,7 +156,7 @@ p{
   margin-right: auto;
   margin-left: auto;
   max-width: 700px;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 #artistindex{
@@ -200,4 +201,34 @@ a.no-fav {
 
 .fav:visited, .no-fav:visited {
   text-decoration: none;
+}
+
+/*a#navbarartists{
+  justify-content: flex-start;;
+}
+
+a#navbaralbums{
+  justify-content: flex-end;
+}*/
+
+.browsebar{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /*border: 1px solid red;*/
+}
+
+.userbar{
+  width: 57%;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  justify-content: flex-end;
+  /*border: 1px solid red;*/
+  padding-right: 2%;
+}
+
+.userbar>a:hover{
+text-shadow: 0 0 15px white;
 }

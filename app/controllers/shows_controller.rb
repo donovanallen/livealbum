@@ -15,9 +15,14 @@ class ShowsController < ApplicationController
 
   def create
     @album = Album.find(params[:album_id])
-    @show = @album.shows.create!(show_params)
     @artist = @album.artist
-    redirect_to @album
+    @show = @album.shows.new(show_params)
+    if @show.save
+      flash[:notice] = "Show was added!"
+      redirect_to @album
+    else
+      render :new
+    end
   end
 
   def edit
@@ -29,7 +34,7 @@ class ShowsController < ApplicationController
     @show = Show.find(params[:id])
     @show.update(show_params)
 
-    redirect_to album_show_path(@show)
+    redirect_to album_show_path(@show), notice: "Song was updated!"
   end
 
   def destroy
@@ -37,18 +42,7 @@ class ShowsController < ApplicationController
     @show = @album.shows.find(params[:album_id])
     @show.destroy
 
-    redirect_to artist_album_path(@album)
-  end
-
-  def add_to_showlist
-    @show = Show.find(params[:id])
-    @show.showlists.create(user: current_user)
-    redirect_to :back
-  end
-
-  def delete_from_showlist
-    Showlist.where(user: current_user).destroy_all
-    redirect_to :back
+    redirect_to artist_album_path(@album), notice: "Song was deleted!"
   end
 
 

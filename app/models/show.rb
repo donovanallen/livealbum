@@ -1,5 +1,7 @@
 class Show < ApplicationRecord
   belongs_to :album
-  has_many :showlists
-  has_many :users, through: :showlists
+
+  validates :title, presence: true
+  validates :year, numericality: true
+  validates :year, length: { maximum: 4}
 end

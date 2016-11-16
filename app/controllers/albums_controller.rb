@@ -14,8 +14,13 @@ class AlbumsController < ApplicationController
 
   def create
     @artist = Artist.find(params[:artist_id])
-    @album = @artist.albums.create!(album_params)
-    redirect_to @artist
+    @album = @artist.albums.new(album_params)
+    if @album.save
+      flash[:notice] = "Album was created!"
+      redirect_to @artist
+    else
+      render :new
+    end
   end
 
   def edit
@@ -26,7 +31,7 @@ class AlbumsController < ApplicationController
     @album = Album.find(params[:id])
     @album.update(album_params)
 
-    redirect_to artist_album_path(@album)
+    redirect_to artist_album_path(@album), notice: "Album was updated!"
   end
 
   def destroy
@@ -35,7 +40,7 @@ class AlbumsController < ApplicationController
     @artist = @album.artist
     @album.destroy
 
-    redirect_to @artist
+    redirect_to @artist, notice: "Album was deleted!"
   end
 
 

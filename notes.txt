@@ -17,10 +17,11 @@ Year model
 
 ****************
 Live album:
+
+**error handling/validation
+---highlighted field on error
 **devise/user actions
-
-**nav bar
-
+**nav bar logos
 add more seed data
 
 **next/previous button on show show page
@@ -53,4 +54,74 @@ disclosure
 beyonce
 
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/AH1S411Bzmw" frameborder="0" allowfullscreen></iframe>
+#from shows controller:::
+def add_to_showlist
+  #choose the first user showlist by default (will change later)
+  @defaultShowlist = current_user.showlists.first
+  #save show to variable
+  @show = Show.find(params[:id])
+  #push @show into a showlist
+  @defaultShowlist << @show.id
+  redirect_to :back
+end
+
+def delete_from_showlist
+  Showlist.where(user: current_user).destroy_all
+  redirect_to :back
+end:::
+
+#from showlist controller:::
+class ShowlistsController < ApplicationController
+  def index
+    @showlists = current_user.showlists
+  end
+  def show
+    @showlists = current_user.showlists
+    @showlist = current_user.showlists.find(params[:id])
+  end
+  def new
+    @user = current_user
+    @showlist = @user.showlists.build
+  end
+  def create
+    @user = current_user
+    @showlist = @user.showlists.create!(showlist_params)
+
+    redirect_to showlists_path
+  end
+  private
+  def showlist_params
+    params.require(:showlist).permit(:name)
+  end
+end:::
+
+#from showlist model:::
+class Showlist < ApplicationRecord
+  belongs_to :user
+  belongs_to :show, optional: true
+end:::
+
+#from show model:::
+has_many :users, through: :showlists
+:::
+
+#from users model:::
+has_many :shows, through: :showlists
+:::
+
+#from routes.rb:::
+resources :showlists
+
+resources :shows do
+  member do
+    post 'add_to_showlist'
+    delete 'delete_from_showlist'
+  end
+end:::
+
+#from albums#show:::
+<% if current_user %>
+      <%= link_to "&hearts;".html_safe, delete_from_showlist_show_path(show), method: :delete, class: "fav" %>
+    <% else %>
+      <%= link_to "&hearts;".html_safe, add_to_showlist_show_path(show), method: :post, class: "no-fav" %>
+    <% end %>:::

@@ -20,19 +20,27 @@
     </div>
   </header>
   <hr style="color:white;width:97%;margin-top:15px">
-<br>
-
+<div class="userbar">
   <% if !current_user %>
-    <%= link_to "Sign up", new_user_registration_path %>
+    <%= link_to "Sign up", new_user_registration_path %> &nbsp;|&nbsp;
+
     <%= link_to "Sign In", new_user_session_path %>
   <% else %>
-    <%= link_to "New Showlist", new_showlist_path %>
+    <%#= link_to "New Showlist", new_showlist_path %>
     <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+    <%= " || " %>
     <%= current_user.email %>
   <% end %>
+</div>
+<br>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<br>
+<div class="browsebar">
+  <%= link_to "Browse by Artists", artists_path, class: "link", id: "navbarartists" %>
+  <%= link_to "Browse by Albums", albums_path, class: "link", id: "navbaralbums" %>
+</div>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 
     <%= yield %>
   </body>

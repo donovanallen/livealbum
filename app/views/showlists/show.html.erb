@@ -1,6 +1,6 @@
 <h3><%= @showlist.name %></h3>
 
-<% @showlist.each do |show| %>
+<% @showlist.shows.each do |show| %>
 <p>
 <%= link_to show.name, class: "link" %>
 </p>
