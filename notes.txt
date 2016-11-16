@@ -22,7 +22,7 @@ Live album:
 add more seed data
 root/main styling
 
-devise views
+devise views css
 video submission
 spotify API
 setlist API
