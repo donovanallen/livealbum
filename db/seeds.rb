@@ -56,20 +56,19 @@ disclosure = Artist.create(name: "Disclosure", nationality: "UK", genre: "House"
 #ALBUM
 settle = Album.create(title: "Settle", year: 2013, artist_id: disclosure.id, photo_url: "https://images-na.ssl-images-amazon.com/images/I/81VfiYEgSrL._SL1400_.jpg")
 caracal = Album.create(title: "Caracal", year: 2015, artist_id: disclosure.id, photo_url: "https://images-na.ssl-images-amazon.com/images/I/81YzdvD0c%2BL._SL1400_.jpg")
-latch = Show.create(title: "Latch", year: 2014, album_id: settle.id, artist_id: disclosure.id, video_url: "")
-whitenoise = Show.create(title: "White Noise", year: 2014, album_id: settle.id, artist_id: disclosure.id, video_url: "")
-magnets = Show.create(title: "Magnets", year: 2015, album_id: caracal.id, artist_id: disclosure.id, video_url: "")
-omen = Show.create(title: "Omen", year: 2015, album_id: caracal.id, artist_id: disclosure.id, video_url: "")
-holdingon = Show.create(title: "Holding On", year: 2015, album_id: caracal.id, artist_id: disclosure.id, video_url: "")
+latch = Show.create(title: "Latch", year: 2014, album_id: settle.id, artist_id: disclosure.id, video_url: "https://www.youtube.com/embed/y9OKiHzjCe0")
+whitenoise = Show.create(title: "White Noise", year: 2014, album_id: settle.id, artist_id: disclosure.id, video_url: "https://www.youtube.com/embed/YKG_t4ziTIU")
+magnets = Show.create(title: "Magnets", year: 2015, album_id: caracal.id, artist_id: disclosure.id, video_url: "https://www.youtube.com/embed/YeWR8FfXUds")
+omen = Show.create(title: "Omen", year: 2015, album_id: caracal.id, artist_id: disclosure.id, video_url: "https://www.youtube.com/embed/KJ5fyYWznZ0")
+holdingon = Show.create(title: "Holding On", year: 2015, album_id: caracal.id, artist_id: disclosure.id, video_url: "https://www.youtube.com/embed/ChzDZTGSJ0E")
 
 #MURA MASA
 muramasa = Artist.create(name: "Mura Masa", nationality: "UK", genre: "House", photo_url: "http://nationofbillions.com/wp-content/uploads/2016/03/mura_masa_bonzai.jpg")
 somedaysomewhere = Album.create(title: "Someday Somewhere", year: 2015, artist_id: muramasa.id, photo_url: "https://f4.bcbits.com/img/a4157583754_10.jpg")
 soundtracktoadeath = Album.create(title: "Soundtrack to a Death", year: 2014, artist_id: muramasa.id, photo_url: "https://f4.bcbits.com/img/a1781819387_10.jpg")
-lovesick = Show.create(title: "Lovesick", year: 2015, album_id: somedaysomewhere.id, artist_id: muramasa.id, video_url: "")
-whenuneedme = Show.create(title: "When U Need Me", year: 2015, album_id: somedaysomewhere.id, artist_id: muramasa.id, video_url: "")
-girl = Show.create(title: "...Girl", year: 2014, album_id: soundtracktoadeath.id, artist_id: muramasa.id, video_url: "")
-money = Show.create(title: "Money", year: 2014, album_id: soundtracktoadeath.id, artist_id: muramasa.id, video_url: "")
+lovesick = Show.create(title: "Lovesick", year: 2015, album_id: somedaysomewhere.id, artist_id: muramasa.id, video_url: "https://www.youtube.com/embed/YO_2x8eQchE")
+whatifigo = Show.create(title: "What If I Go?", year: 2015, album_id: somedaysomewhere.id, artist_id: muramasa.id, video_url: "https://www.youtube.com/embed/Qit9EA0AC2o")
+firefly = Show.create(title: "Firefly", year: 2014, album_id: soundtracktoadeath.id, artist_id: muramasa.id, video_url: "https://www.youtube.com/embed/y1IzLaxmHH4")
 
 
 donovan = User.create(email: "don@email.com", password: "password")

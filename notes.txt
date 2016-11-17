@@ -16,7 +16,7 @@ video/show model
 Year model
 
 ****************
-Live album:
+Setlist:
 
 **nav bar logos
 add more seed data
